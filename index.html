@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Sentiment Analysis Web App</title>
@@ -58,5 +58,300 @@
         <div class="text-center" style="font-size: 20px;background-color:whitesmoke;padding:20px; margin-top:0px;">
             <h5>Designed by Sesan as a Udacity Project</h5>
         </div>
+    </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en", dir='ltr'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title></title>
+        <link rel="stylesheet" href='style.css' type='text/css'/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+
+    <body style="margin: 0;">
+        <!--<header style="background-color: #3eb489; display: flex; clear: both; padding: 5px;">
+            <div style=" width: 90vw;">
+                <ul style="float: right; display: flex; list-style: none; font-family: Calibri; font-size: 15px;">
+                    <li style="color: white; margin-right: 30px;" >Register</li>
+                    <li style="margin-right: 30px;">Courses</li>
+                    <li style="color: white; margin-right: 30px;">Contact</li>
+                    <li style="margin-right: 30px;">About</li>
+                </ul>
+            </div>
+        </header>-->
+        <script>
+    scroll = window.requestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60)};
+    function loop() {
+        var elemShow = document.querySelectorAll('.hide')
+        var elemR = document.querySelectorAll('.hideR')
+        var run = 1
+        elemShow.forEach(function(element){
+            if (isElementInViewport(element)) {
+                element.classList.add('slideIn');
+                element.classList.remove('hide')
+            }
+            else{
+                return null
+            }
+        });
+        elemR.forEach(function(element){
+            if (isElementInViewport(element)) {
+                element.classList.add('slideInR');
+                element.classList.remove('hideR')
+            }
+            else{
+                return null
+            }
+        });
+        scroll(loop)
+    }
+
+    function isElementInViewport(el) {
+        var bound = el.getBoundingClientRect()
+        if (bound.top >= 0 && bound.left >= 0 && bound.right <= window.innerWidth && bound.bottom <= window.innerHeight) {
+            return true
+            
+        }
+        else {
+            return false
+        }
+    }
+    loop();
+</script>
+
+<style>
+    .hide{
+        opacity: 0;
+    }
+    .hideR{
+        opacity: 0;
+    }
+
+    @media screen and (max-width: 620px) {
+        .subDiv {
+            font-size: 10px;
+        }
+
+        .nav {
+            font-size: 10px;
+        }
+
+        .land {
+            height: 45vh;
+            
+        }
+
+        .jumboCont {
+            top: 30vh; 
+            left: 50vw; 
+            transform: translate(-50%, -50%);
+        }
+
+        .jumboCont h1 {
+            font-size: 30px;
+        }
+
+        .jumboCont h3 {
+            font-size: 14px;
+        }
+
+        .jumboCont h6 {
+            font-size: 10px;
+        }
+
+        .subDiv {
+            height: 20vh;
+        }
+
+        .subDiv h4{
+            font-size: 1.7vh;
+            margin: auto 25px auto 25px;
+            
+        }
+    }
+
+    @media screen and (min-width: 621px) and (max-width: 1024px) {
+        .subSect {
+            font-size: 2vh;
+        }
+
+        .nav {
+            font-size: 15px;
+        }
+
+        .land {
+            height: 60vh;
+            
+        }
+
+        .jumboCont {
+            top: 45vh; 
+            left: 50vw; 
+            transform: translate(-50%, -50%);
+        }
+
+        .jumboCont h1 {
+            font-size: 50px;
+        }
+
+        .jumboCont h3 {
+            font-size: 18px;
+        }
+
+        .jumboCont h6 {
+            font-size: 16px;
+        }
+
+        .subDiv {
+            height: 30vh;
+        }
+
+        .subDiv h4{
+            font-size: 2.7vh;
+            margin: auto 25px auto 25px;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .subSect {
+            font-size: 3vh;
+        }
+
+        .nav {
+            font-size: 20px;
+        }
+
+        .land {
+            height: 100vh;
+            
+        }
+
+        .jumboCont {
+            top: 75vh; 
+            left: 50vw; 
+            transform: translate(-50%, -50%);
+        }
+
+        .jumboCont h1 {
+            font-size: 50px;
+        }
+
+        .jumboCont h3 {
+            font-size: 23px;
+        }
+
+        .jumboCont h6 {
+            font-size: 18px;
+        }
+
+        .subDiv {
+            height: 40vh;
+        }
+
+        .subDiv h4{
+            font-size: 3.2vh;
+            margin: auto 40px auto 40px;
+        }
+    }
+    @-webkit-keyframes slideIn {
+            0%{
+                transform: translateX(-900px)
+            }
+            100%{
+                transform: translateX(0)
+            }
+        }
+    @keyframes slideIn{
+            0% {
+                transform: translateX(-900px)
+            }
+            100% {
+                transform: translateX(0px)
+            }
+        }
+    @-webkit-keyframes slideInR {
+            0%{
+                transform: translateX(900px)
+            }
+            100%{
+                transform: translateX(0)
+            }
+        }
+    @keyframes slideInR{
+            0% {
+                transform: translateX(900px)
+            }
+            100% {
+                transform: translateX(0px)
+            }
+
+        }
+    .slideIn{
+        -webkit-animation: slideIn 2s forwards;
+        -moz-animation: slideIn 2s forwards;
+        animation: slideIn 2s forwards;
+    }
+    .slideInR{
+        -webkit-animation: slideInR 2s forwards;
+        -moz-animation: slideInR 2s forwards;
+        animation: slideInR 2s forwards;
+    }
+</style>
+
+<div class="land" style="position:relative;  color: white; background-size: 100% 100%; background-image: url('static/landh.jpg');">
+    <header  style=" display: flex; clear: both; padding:2vh;">
+        <div style=" width: 90vw;">
+            <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
+                <li style="color: white; margin-right: 3vw;" >Register</li>
+                <li style="margin-right: 3vw;">Courses</li>
+                <li style="color: white; margin-right: 3vw;">Contact</li>
+                <li style="margin-right: 3vw;">About</li>
+            </ul>
+        </div>
+        
+    </header>
+    <div style="position:relative; box-shadow: inset 0 3px 4px -4px black;top:0;left:0;width:100%;height:100%;"></div>
+    
+    <div class="jumboCont"style="position:absolute;  transform: translate(-50%, -50%); padding:0 20px 0 20px; background-color: rgb(62, 180, 137, 0.4);">
+        <h1 style=" text-align: center;font-family: Candara;  text-shadow: -2px -2px 4px black;"><font style="color: #ae0ef3" color='#ae0ef3'>J'E</font><font color="#25c325">leva</font><font color="#ff7f00">tes</font></h1> 
+        <h3 style=" text-align: center;font-family: monospace;  margin-top: -10px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">laying the building blocks for education</h1>
+        <h6 style=" text-align: center;font-family: monospace;  margin-top: -5px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Course info</h4>
+    </div>
+    
+</div>
+<div style="margin-top: -5px; font-family: Candara; background-color: #3eb489; color:white;" class='subSect'>
+    <div  class="subDiv"style=" display: flex;  ">
+        <h4 class="hide" style="width: 60vw; float: left; ">J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
+            Using the phonic system enables fluency in reading and writing. 
+        </h4>
+        <img width="40%"height="100%" style="float: right;" src="static/alth.jpg"/>
+    </div>
+    <div class="subDiv"style=" display: flex; clear: both;">
+        <div style="float: left; width: 40vw; margin: auto 6vw auto 10vw;">
+            <img width="35%" style="float: left;" src="static/altc.png"/>
+            <img width="25%" style="float: left; margin-left: 10vw; margin-top: 20%;" src="static/altf.png"/>
+        </div>
+        <h4 class="hideR" style="width: 60vw; float: right; margin: auto 30px auto 30px;">Our learning program is designed to enhance reading, writing and comprehension for all ages. We employ fun, multisensory 
+            teaching processes and age-appropriate materials to teach reading and writing.</h4>
+    </div>
+    <div class="subDiv"style=" display: flex; clear: both;">
+        <h4 class="hide" style="width: 60vw; float: left; margin: auto 30px auto 30px;" >We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
+            <ul>
+                <li>350 three-sound words</li> 
+                <li>4320 four-sound words</li>
+                <li>21,650 five-sound words</li>
+            </ul>
+            </h4>
+        <div style="float: right; width:40vw; position: relative; margin: auto;">
+           <!-- <img width="100%" height="100%" src="{% static 'landc.jpg' %}"/>            <img width="23%" style="float: right; position: absolute; right:5vw; top:70%;" src="{% static 'altd.png' %}"/>
+        --> <img width="40%" style="float: right;" src="static/alta.png"/>
+            <img width="40%" style="float: left;"  src="static/altb.png"/>
+        </div>
+    </div>
+</div>
+        <footer style="color: #3eb489; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
     </body>
 </html>
