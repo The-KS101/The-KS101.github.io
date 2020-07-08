@@ -171,6 +171,12 @@
             margin: auto 25px auto 25px;
             
         }
+
+        .imgHolder img{
+            margin-top:3em;
+            margin-left: 5px;
+            margin-right: 1px;
+        }
     }
 
     @media screen and (min-width: 621px) and (max-width: 1024px) {
@@ -213,6 +219,12 @@
             font-size: 2.7vh;
             margin: auto 25px auto 25px;
         }
+
+        .imgHolder img{
+            margin-top:3em;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
     }
 
     @media screen and (min-width: 1025px) {
@@ -221,7 +233,7 @@
         }
 
         .nav {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .land {
@@ -248,12 +260,19 @@
         }
 
         .subDiv {
-            height: 40vh;
+            height: 50vh;
         }
 
         .subDiv h4{
             font-size: 3.2vh;
-            margin: auto 40px auto 40px;
+            margin: auto 10vw auto 10vw;
+            width: 60vw;
+        }
+
+        .imgHolder img{
+            margin-top:2em;
+            margin-left: 20px;
+            margin-right: 20px;
         }
     }
     @-webkit-keyframes slideIn {
@@ -300,7 +319,6 @@
         animation: slideInR 2s forwards;
     }
 </style>
-
 <div class="land" style="position:relative; color: white; background-size: 100% 100%; background-image: url('/static/landh.jpg');">
     <header  style=" display: flex; clear: both; padding:2vh;">
         <div style=" width: 90vw;">
@@ -322,32 +340,36 @@
     </div>
     
 </div>
-<div style="margin-top: -5px; font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; background-color: #3eb489; color:white;" class='subSect'>
-    <div  class="subDiv"style=" display: flex;  ">
-        <h4 class="hide" style="width: 60vw; float: left; ">J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
-            Using the phonic system enables fluency in reading and writing. 
+<div style="font-family: Candara; background-color: #3eb489; color:white;" class='subSect'>
+
+    <div  class="subDiv" style="display: flex; background-color:rgb(170, 49, 49); text-align: left;">
+        <h4 class="hide" style=" float: left; ">J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
+                Using the phonic system enables fluency in reading and writing.
         </h4>
-        <img width="40%"height="100%" style="float: right;" src="/static/alth.jpg"/>
-    </div>
-    <div class="subDiv"style=" display: flex; clear: both;">
-        <div style="float: left; width: 40vw; margin: auto 6vw auto 10vw;">
-            <img width="35%" style="float: left;" src="/static/altc.png"/>
-            <img width="25%" style="float: left; margin-left: 10vw; margin-top: 20%;" src="/static/altf.png"/>
+        <div style="float: right; width:40vw; height:inherit; position: relative; margin: auto;">
+            <img height="100%" src="/static/alth.jpg"/>
         </div>
-        <h4 class="hideR" style="width: 60vw; float: right; margin: auto 30px auto 30px;">Our learning program is designed to enhance reading, writing and comprehension for all ages. We employ fun, multisensory 
-            teaching processes and age-appropriate materials to teach reading and writing.</h4>
     </div>
-    <div class="subDiv"style=" display: flex; clear: both;">
-        <h4 class="hide" style="width: 60vw; float: left; margin: auto 30px auto 30px;" >We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
-            <ul>
-                <li>350 three-sound words</li> 
-                <li>4320 four-sound words</li>
-                <li>21,650 five-sound words</li>
-            </ul>
-            </h4>
-        <div style="float: right; width:40vw; position: relative; margin: auto;">
-           <!-- <img width="100%" height="100%" src="{% static 'landc.jpg' %}"/>            <img width="23%" style="float: right; position: absolute; right:5vw; top:70%;" src="{% static 'altd.png' %}"/>
-        --> <img width="40%" style="float: right;" src="/static/alta.png"/>
+
+    <div class="subDiv" style=" display: flex; background-color: rgb(218, 203, 0); text-align: center;">
+        <div class="imgHolder" style="float: right; width:40vw; position: relative;  background-color: #3eb489;">
+            <img width="40%" style="float: right;" src="/static/altf.png"/>
+            <img width="30%" style="float: left;"  src="/static/altc.png"/>
+        </div>
+            <h4 class="hideR" style="float: right;"> Our learning program is designed to enhance reading, writing and comprehension for all ages. We employ fun, multisensory 
+                teaching processes and age-appropriate materials to teach reading and writing.</h4>
+    </div>
+    <div class="subDiv"style=" display: flex;text-align: right;">
+        <h4 class="hide" style=" float: left;" >
+            We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
+                <ul style="list-style: none;">
+                    <li>350 three-sound words</li> 
+                    <li>4320 four-sound words</li>
+                    <li>21,650 five-sound words</li>
+                </ul></h4>
+            
+        <div style="float: right; width:40vw; position: relative; margin: auto; ">
+            <img width="40%" style="float: right; margin-right: 10px;" src="/static/alta.png"/>
             <img width="40%" style="float: left;"  src="/static/altb.png"/>
         </div>
     </div>
