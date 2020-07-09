@@ -82,7 +82,7 @@
                 </ul>
             </div>
         </header>-->
-        <script>
+       <script>
     scroll = window.requestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60)};
     function loop() {
         var elemShow = document.querySelectorAll('.hide')
@@ -130,67 +130,13 @@
         opacity: 0;
     }
 
-    @media screen and (max-width: 620px) {
-        .subDiv {
-            font-size: 10px;
-        }
-
-        .nav {
-            font-size: 10px;
-        }
-
-        .land {
-            height: 45vh;
-            
-        }
-
-        .jumboCont {
-            top: 30vh; 
-            left: 50vw; 
-            transform: translate(-50%, -50%);
-        }
-
-        .jumboCont h1 {
-            font-size: 30px;
-        }
-
-        .jumboCont h3 {
-            font-size: 14px;
-        }
-
-        .jumboCont h6 {
-            font-size: 10px;
-        }
-
-        .subDiv {
-            height: 20vh;
-        }
-
-        .subDiv h4{
-            font-size: 1.7vh;
-            margin: auto 25px auto 25px;
-            
-        }
-
-        .imgHolder img{
-            margin-top:3em;
-            margin-left: 5px;
-            margin-right: 1px;
-        }
-    }
-
-    @media screen and (min-width: 621px) and (max-width: 1024px) {
-        .subSect {
-            font-size: 2vh;
-        }
-
+    @media screen and (max-width: 760px) {
         .nav {
             font-size: 15px;
         }
 
         .land {
-            height: 60vh;
-            
+            height: 80vh;
         }
 
         .jumboCont {
@@ -211,27 +157,117 @@
             font-size: 18px;
         }
 
+        .subSect {
+            font-size: 2vh;
+            margin-top: 0px;
+            font-family:Candara; 
+            color:white;
+            text-align: center;
+        }
+
         .subDiv {
-            height: 30vh;
+            height: 50vh;
+            width: 100%;
+            margin: 0;
+            background-color:rgb(170, 49, 49);            
+        }
+
+        .levels{
+            height:30vh;
+            margin-top:30px;
         }
 
         .subDiv h4{
             font-size: 2.7vh;
-            margin: auto 25px auto 25px;
+            margin-top:1vh;
         }
 
-        .imgHolder img{
-            margin-top:3em;
-            margin-left: 5px;
-            margin-right: 5px;
+        .subDiv p{
+            font-size: 2vh;
+            width: 80vw;
+            margin: 1vh auto;
         }
+
+        .subDiv img{
+            border-radius: 100%;
+            margin-top: 30px;
+            height:30%;
+        }
+
+        .abt{
+            width:80vw;
+            text-align: center;
+            margin:10vh auto;
+        }
+        
+        .mission{
+            width:80vw;
+            margin:5vh auto;
+        }
+
+        .miss{
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .missp{
+            width: 100%;
+        }
+
+        .test{
+            width: 80%;
+            text-align: center;
+            margin:5vh auto;
+        }
+
+        .contact{
+            width:90%;
+            margin: auto;
+        }
+
+        .contact h5{
+            font-size:20px;
+            opacity: 0;
+        }
+
+        #id_name{
+            width:100%;
+            height:30px;
+            padding-left: 10px;
+
+        }
+
+        #id_email{
+            width:100%;
+            height:30px;
+            padding-left: 10px;
+
+
+        }
+
+        #id_subject{
+            width:100%;
+            height:30px;
+            padding-left: 10px;
+
+        }
+
+        #id_message{
+            width:100%;
+            height:100px;
+            padding-left: 10px;
+
+        }
+
+        #inlin div{
+            width:100%;
+            margin-bottom:30px;
+        }
+
     }
 
-    @media screen and (min-width: 1025px) {
-        .subSect {
-            font-size: 3vh;
-        }
-
+    @media screen and (min-width: 761px) {
         .nav {
             font-size: 18px;
         }
@@ -242,13 +278,13 @@
         }
 
         .jumboCont {
-            top: 75vh; 
+            top: 40vh; 
             left: 50vw; 
             transform: translate(-50%, -50%);
         }
 
         .jumboCont h1 {
-            font-size: 100px;
+            font-size: 70px;
         }
 
         .jumboCont h3 {
@@ -259,21 +295,135 @@
             font-size: 25px;
         }
 
+        .subSect {
+            font-size: 3vh;
+            display:flex;
+            position: absolute;
+            top:52vh;
+            left:7vw;
+            right:7vw;
+            font-family:Candara;
+            color:white;
+        }
+
         .subDiv {
-            height: 50vh;
+            height: 32vh;
+            width: 25vw;
+            margin: 0 2vw;
+            
+        }
+
+        .levels{
+            height:35vh;
+            position:absolute;
+            margin-top:14%;
+            background-color:rgb(170, 49, 49);
+            padding: 50px 0 50px 0;
+            text-align: center;
         }
 
         .subDiv h4{
             font-size: 3.2vh;
-            margin: auto 10vw auto 10vw;
-            width: 60vw;
+            width: 25vw;
+            margin-top:3vh;
         }
 
-        .imgHolder img{
-            margin-top:2em;
-            margin-left: 20px;
-            margin-right: 20px;
+        .subDiv p{
+            font-size: 0.6em;
+            width: 20vw;
+            margin: 1vh auto;
         }
+
+        .subDiv img{
+            position: absolute; 
+            z-index: 2;
+            border-radius: 100%;
+            left: 32%;
+            height:45%;
+        }
+
+        .abt{
+            width:60vw;
+            text-align: center;
+            margin:5vh auto;
+        }
+
+        .abt p{
+            margin-top:20px;
+            word-spacing: 2px;
+        }
+
+        .mission{
+            width:85vw;
+            margin:5vh auto;
+        }
+
+        .miss{
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+            display: flex;
+            font-size:15px;
+        }
+
+        .missp{
+            width: 48%;
+            margin:20px;
+        }
+        .testi{
+            margin: 5vh auto;
+
+        }
+
+        .test{
+            margin: 5vh auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        
+
+        #id_name{
+            width:100%;
+            padding-left: 10px;
+        }
+
+        #id_email{
+            width:100%;
+            padding-left: 10px;
+
+        }
+
+        #id_subject{
+            width:100%;
+            padding-left: 10px;
+
+        }
+
+        #id_message{
+            width:100%;
+            padding-left: 10px;
+
+        }
+
+        .contact{
+            width:80%;
+            margin:5vh auto;
+        }
+
+        .contact h6{
+            font-size:20px;
+
+        }
+
+        #inlin{
+            display:flex;
+        }
+
+        #inlin div{
+            width:50%;
+        }
+
     }
     @-webkit-keyframes slideIn {
             0%{
@@ -319,8 +469,9 @@
         animation: slideInR 2s forwards;
     }
 </style>
-<div class="land" style="position:relative; color: white; background-size: 100% 100%; background-image: url('/static/landh.jpg');">
-    <header  style=" display: flex; clear: both; padding:2vh;">
+
+<div class="land" style="position:relative;  color: white; background-size: 100% 100%; background-image: url('/static/landh.jpg');">
+    <header  style=" display: flex; padding:2vh;">
         <div style=" width: 90vw;">
             <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
                 <li style="color: white; margin-right: 3vw;" >Register</li>
@@ -333,47 +484,113 @@
     </header>
     <div style="position:relative; box-shadow: inset 0 3px 4px -4px black;top:0;left:0;width:100%;height:100%;"></div>
     
-    <div class="jumboCont"style="position:absolute; width:98%; transform: translate(-50%, -50%); background-color: rgb(62, 180, 137, 0);">
+    <div class="jumboCont" style="position:absolute; width:95%; transform: translate(-50%, -50%); background-color: rgb(62, 180, 137, 0);">
         <h1 style=" text-align: center;font-family: Candara; margin-top: -40px; text-shadow: -2px -2px 4px black;"><font style="color: #ae0ef3" color='#ae0ef3'>J'E</font><font color="#25c325">leva</font><font color="#ff7f00">tes</font></h1> 
         <h3 style=" text-align: center;font-family: monospace;  margin-top: 15px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">laying the building blocks for education</h1>
         <h6 style=" text-align: center;font-family: monospace;  margin-top: 13px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Course info</h4>
     </div>
-    
 </div>
-<div style="font-family: Candara; background-color: #3eb489; color:white;" class='subSect'>
 
-    <div  class="subDiv" style="display: flex; background-color:rgb(170, 49, 49); text-align: left;">
-        <h4 class="hide" style=" float: left; ">J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
-                Using the phonic system enables fluency in reading and writing.
-        </h4>
-        <div style="float: right; width:40vw; height:inherit; position: relative; margin: auto;">
-            <img height="100%" src="/static/alth.jpg"/>
-        </div>
-    </div>
-
-    <div class="subDiv" style=" display: flex; background-color: rgb(218, 203, 0); text-align: center;">
-        <div class="imgHolder" style="float: right; width:40vw; position: relative;  background-color: #3eb489;">
-            <img width="40%" style="float: right;" src="/static/altf.png"/>
-            <img width="30%" style="float: left;"  src="/static/altc.png"/>
-        </div>
-            <h4 class="hideR" style="float: right;"> Our learning program is designed to enhance reading, writing and comprehension for all ages. We employ fun, multisensory 
-                teaching processes and age-appropriate materials to teach reading and writing.</h4>
-    </div>
-    <div class="subDiv"style=" display: flex;text-align: right;">
-        <h4 class="hide" style=" float: left;" >
-            We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
-                <ul style="list-style: none;">
-                    <li>350 three-sound words</li> 
-                    <li>4320 four-sound words</li>
-                    <li>21,650 five-sound words</li>
-                </ul></h4>
+    <div class='subSect'>
+        <div  class="subDiv hide" style=" position:relative; ">
+            <img src="/static/alth.jpg" />
+            <div class="levels">
+                <h4 class="hide">Basic</h4>
+                <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
+                Using the phonic system enables fluency in reading and writing.</p>
+            </div>
             
-        <div style="float: right; width:40vw; position: relative; margin: auto; ">
-            <img width="40%" style="float: right; margin-right: 10px;" src="/static/alta.png"/>
-            <img width="40%" style="float: left;"  src="/static/altb.png"/>
+        </div>
+        <div  class="subDiv hide" style=" position:relative;">
+            <img src="/static/alth.jpg" />
+            <div class="levels">
+                <h4 class="hide">Interemediate</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi perferendis ipsum eum impedit officia cum tenetur. Facilis iste adipisci quisquam sint saepe vel maiores neque eos possimus? Possimus, fuga?</p>
+            </div>
+        
+        </div>
+        <div  class="subDiv hide" style=" position:relative;">
+            <img src="/static/alth.jpg"/>
+            <div class="levels">
+                <h4 class="hide">Advanced</h4>
+                <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
+                    Using the phonic system enables fluency in reading and writing.</p>
+        </div>
+    
+    </div>
+    </div>
+
+<div style="">
+    <div style="width: 100%;">
+        <div class="abt">
+            <h3 style="font-size:35px;">About Me</h3>
+            <h6 style="font-style: italic;font-size:20px;">I'm here to help you</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi recusandae similique natus assumenda dicta itaque ipsa, accusantium sed repellat voluptatibus ut hic molestias nisi? Sed totam nam distinctio quis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum placeat perspiciatis consequatur. Voluptate atque sit dolorum culpa vero expedita beatae repudiandae tenetur veritatis! Ab voluptatibus excepturi modi odio numquam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam! Dignissimos repellendus doloribus at quaerat sed a, in molestiae totam, recusandae cumque voluptatum blanditiis eaque molestias doloremque ea. Similique, perferendis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis fuga praesentium ratione dicta, aperiam voluptatibus non ullam consectetur iure omnis doloremque voluptates placeat eligendi alias temporibus et vitae deleniti!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, autem delectus totam consectetur maiores fuga neque itaque atque, nisi in fugit ipsum iste molestiae nihil expedita obcaecati quo iure odit?
+            </p>
+        </div>
+    </div>
+    <!--<div>
+        <img height="50vh" src="{% static 'landa.jpg' %}"/>
+        <img height="50vh" src="{% static 'landb.jpg' %}"/>
+    </div>-->
+</div>
+
+<div style="background-color: rgb(224, 224, 37);">
+    <div style="width: 100%; border: 2px solid rgb(224, 224, 37);;">
+        <div class="mission">
+            <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Our Vision</h3>
+            <h6 style="text-align: center;font-style: italic; font-size:20px;">What's Our goal</h6>
+            <div class="miss">
+                <p class="missp">We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
+                350 three-sound words, 4320 four-sound words, 21,650 five-sound words. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi rerum neque ea debitis perspiciatis ducimus blanditiis commodi harum quaerat maiores impedit alias, reprehenderit officiis deleniti, repellat molestias odio similique placeat.
+                    </p>
+
+                <p class="missp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod ab sequi, illum beatae ea asperiores voluptate enim excepturi atque cupiditate eos necessitatibus adipisci ipsa rem quaerat ad numquam cum. Quasi?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam excepturi voluptatum alias reiciendis optio, molestiae molestias at dignissimos tempore, esse sequi odit modi fugit minima est deserunt, sit dicta id.
+                </p>
+            </div>
         </div>
     </div>
 </div>
-        <footer style="color: #3eb489; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
+
+<div class="tester">
+    <div style="width: 100%;">
+        <div class="testi">
+            <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Testimonials</h3>
+            <h6 style="text-align: center; font-style: italic;font-size:20px;">What people have to say about us</h6>
+            <div class="test">
+                <p>'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi rerum neque ea debitis perspiciatis ducimus blanditiis commodi harum quaerat maiores impedit alias, reprehenderit officiis deleniti, repellat molestias odio similique placeat'.
+                    </p>
+                    <p>-John Doe</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h3 style="text-align:center;">Resources</h3>
+</div>
+
+<div style="background-color: rgb(127, 54, 54); padding:30px 0; color:white;">
+    <div style="text-align: center;">
+        <h4 style="font-size:35px;">Inquiries</h4>
+        <h6 style="font-style: italic;font-size:15px;">For more information regarding our services</h6>
+    </div>
+    <form action="" method="post" style="margin: 5vh auto; width:70vw;">
+        <div class="contact" id='inlin'>
+            <div style="display:flex;margin-right: 100px;">{{form.name}}</div>
+            <div style="display:flex;">{{form.email}}</div>
+        </div>
+
+        <div class="contact">
+            <div style="display:flex; margin:30px 0;">{{form.subject}}</div>
+            <div style="display:flex;">{{form.message}}</div>
+        </div>
+    </form>
+</div>        <footer style="color: #3eb489; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
     </body>
 </html>
