@@ -82,7 +82,28 @@
                 </ul>
             </div>
         </header>-->
-       <script>
+       
+        <script>
+    var bgImageArray = ["landj.jpg",  "landm.jpg", "lando.jpg", "landl.jpg"],
+    base = "/static/",
+    secs = 7;
+    bgImageArray.forEach(function(img){
+    new Image().src = base + img; 
+    // caches images, avoiding white flash between background replacements
+});
+
+function backgroundSequence() {
+	window.clearTimeout();
+	var k = 0;
+	for (i = 0; i < bgImageArray.length; i++) {
+		setTimeout(function(){ 
+			document.getElementsByClassName("land")[0].style.backgroundImage = "url(" + base + bgImageArray[k] + ")";
+		if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
+		}, (secs * 1000) * i)	
+	}
+}
+backgroundSequence();
+
     scroll = window.requestAnimationFrame || function(callback){ window.setTimeout(callback, 1000/60)};
     function loop() {
         var elemShow = document.querySelectorAll('.hide')
@@ -136,7 +157,13 @@
         }
 
         .land {
-            height: 80vh;
+            height: 75vh;
+            background-image: url("{% static 'landl.jpg' %}");
+            transition: 2s;
+        }
+
+        .land * {
+            transition:none
         }
 
         .jumboCont {
@@ -153,10 +180,6 @@
             font-size: 25px;
         }
 
-        .jumboCont h6 {
-            font-size: 18px;
-        }
-
         .subSect {
             font-size: 2vh;
             margin-top: 0px;
@@ -169,7 +192,21 @@
             height: 50vh;
             width: 100%;
             margin: 0;
-            background-color:rgb(170, 49, 49);            
+            border:1px solid transparent;        
+        }
+
+
+        #subDivbasic{
+            background-color:#900404;
+        }
+
+        #subDivmid{
+            background-color:#d8c902;
+        }        
+
+        #subDivadvanced{
+            background-color:#4cad89;
+
         }
 
         .levels{
@@ -189,9 +226,19 @@
         }
 
         .subDiv img{
+            width: 60%;
+            margin:30px;
+        }
+
+        .imgLevel{
             border-radius: 100%;
-            margin-top: 30px;
-            height:30%;
+            margin: 30px auto;
+            height:9em;
+            width:9em;
+            text-align:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .abt{
@@ -215,10 +262,35 @@
             width: 100%;
         }
 
-        .test{
-            width: 80%;
+        .testi{
+            border: 1px solid transparent;
+            /*overflow: overlay;*/
+        }
+
+        .testSlide{
+            display:inline-block;
+            margin: 0 auto;
+            width: 100%;
             text-align: center;
-            margin:5vh auto;
+            padding:0;
+            height:250px;
+        }
+
+        .testSlide p{
+            font-size: 56%;
+        }
+
+        .gallery{
+            margin:auto;
+            width:90%;
+        }
+
+        .gallery img{
+            width:100%;
+        }
+
+        .gallHolder{
+            width:80%;
         }
 
         .contact{
@@ -274,7 +346,12 @@
 
         .land {
             height: 100vh;
-            
+            background-image: url("{% static 'landl.jpg' %}");
+            transition: 2s;
+        }
+
+        .land * {
+            transition:none;
         }
 
         .jumboCont {
@@ -291,10 +368,6 @@
             font-size: 30px;
         }
 
-        .jumboCont h6 {
-            font-size: 25px;
-        }
-
         .subSect {
             font-size: 3vh;
             display:flex;
@@ -307,24 +380,35 @@
         }
 
         .subDiv {
-            height: 32vh;
-            width: 25vw;
+            height: 46.5vh;
+            width: 50vw;
             margin: 0 2vw;
-            
         }
 
         .levels{
             height:35vh;
+            width:100%;
             position:absolute;
-            margin-top:14%;
-            background-color:rgb(170, 49, 49);
+            margin-top:23%;
             padding: 50px 0 50px 0;
             text-align: center;
         }
 
+        #basic{
+            background-color:#900404;    
+        }
+
+        #mid{
+            background-color:#d8c902;    
+        }
+
+        #advanced{
+            background-color:#4cad89;    
+
+        }
+
         .subDiv h4{
             font-size: 3.2vh;
-            width: 25vw;
             margin-top:3vh;
         }
 
@@ -335,11 +419,24 @@
         }
 
         .subDiv img{
+            width: 60%;
+            margin:30px;
+        }
+
+        .imgLevel{
             position: absolute; 
             z-index: 2;
             border-radius: 100%;
-            left: 32%;
-            height:45%;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: 10px auto;
+            height:6em;
+            width:6em;
+            text-align:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .abt{
@@ -371,39 +468,47 @@
             margin:20px;
         }
         .testi{
-            margin: 5vh auto;
-
+            border: 1px solid transparent;
         }
 
-        .test{
+        .testSlide{
             margin: 5vh auto;
-            width: 80%;
+            width: 65%;
+            padding:0;
+            height: 40vh;
             text-align: center;
+            height:300px;
         }
 
+        .testSlide p{
+            font-size: 70%;
+        }
+
+        
         
 
         #id_name{
             width:100%;
             padding-left: 10px;
+            border:2px solid black;
         }
 
         #id_email{
             width:100%;
             padding-left: 10px;
-
+            border:2px solid black;
         }
 
         #id_subject{
             width:100%;
             padding-left: 10px;
-
+            border:2px solid black;
         }
 
         #id_message{
             width:100%;
             padding-left: 10px;
-
+            border:2px solid black;
         }
 
         .contact{
@@ -424,7 +529,47 @@
             width:50%;
         }
 
+        .gallery{
+            margin:auto;
+            width:90%;
+        }
+
+        .gallery img{
+            width:32.6%;
+        }
+
+        .gallHolder{
+            width:80%;
+
+        }
+
     }
+
+	
+
+    @keyframes backGFadeInOut {
+        0% {
+        opacity:1;
+        }
+        45% {
+        opacity:1;
+        }
+        55% {
+        opacity:0;
+        }
+        100% {
+        opacity:0;
+        }
+        }
+
+        #cf3 img.top {
+        animation-name: backGimg;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        }
+
     @-webkit-keyframes slideIn {
             0%{
                 transform: translateX(-900px)
@@ -470,7 +615,7 @@
     }
 </style>
 
-<div class="land" style="position:relative;  color: white; background-size: 100% 100%; background-image: url('/static/landh.jpg');">
+<div class="land" style="position:relative;  color: white; background-size: 100% 100%; ">
     <header  style=" display: flex; padding:2vh;">
         <div style=" width: 90vw;">
             <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
@@ -482,36 +627,41 @@
         </div>
         
     </header>
-    <div style="position:relative; box-shadow: inset 0 3px 4px -4px black;top:0;left:0;width:100%;height:100%;"></div>
+    <div style="position:relative; box-shadow: inset 0 5px 4px -4px black;top:0;left:0;width:100%;height:100%;"></div>
     
     <div class="jumboCont" style="position:absolute; width:95%; transform: translate(-50%, -50%); background-color: rgb(62, 180, 137, 0);">
-        <h1 style=" text-align: center;font-family: Candara; margin-top: -40px; text-shadow: -2px -2px 4px black;"><font style="color: #ae0ef3" color='#ae0ef3'>J'E</font><font color="#25c325">leva</font><font color="#ff7f00">tes</font></h1> 
+        <h1 style=" text-align: center;font-family: Candara; margin-top: -40px; text-shadow: -2px -2px 4px black;"><font color='#d8c902'>J'E</font><font color="#4cad89">leva</font><font color="#900404">tes</font></h1> 
         <h3 style=" text-align: center;font-family: monospace;  margin-top: 15px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">laying the building blocks for education</h1>
-        <h6 style=" text-align: center;font-family: monospace;  margin-top: 13px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Course info</h4>
     </div>
 </div>
 
     <div class='subSect'>
-        <div  class="subDiv hide" style=" position:relative; ">
-            <img src="/static/alth.jpg" />
-            <div class="levels">
+        <div  class="subDiv hide" id="subDivbasic" style=" position:relative; ">
+            <div class="imgLevel" style="background-color: #4cad89;">
+                <img  src="/static/alt.png" />
+            </div>
+            <div class="levels" id="basic">
                 <h4 class="hide">Basic</h4>
                 <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
                 Using the phonic system enables fluency in reading and writing.</p>
             </div>
             
         </div>
-        <div  class="subDiv hide" style=" position:relative;">
-            <img src="/static/alth.jpg" />
-            <div class="levels">
+        <div  class="subDiv hide" id="subDivmid" style=" position:relative;">
+            <div class="imgLevel" style="background-color:#900404; ">
+                <img  src="/static/alta.png" />
+            </div>
+            <div class="levels" id=mid > 
                 <h4 class="hide">Interemediate</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi perferendis ipsum eum impedit officia cum tenetur. Facilis iste adipisci quisquam sint saepe vel maiores neque eos possimus? Possimus, fuga?</p>
             </div>
         
         </div>
-        <div  class="subDiv hide" style=" position:relative;">
-            <img src="/static/alth.jpg"/>
-            <div class="levels">
+        <div  class="subDiv hide"id="subDivadvanced" style=" position:relative;">
+            <div class="imgLevel" style="background-color:#d8c902;">
+                <img  src="/static/altb.png" />
+            </div>
+            <div class="levels" id="advanced">
                 <h4 class="hide">Advanced</h4>
                 <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
                     Using the phonic system enables fluency in reading and writing.</p>
@@ -533,14 +683,10 @@
             </p>
         </div>
     </div>
-    <!--<div>
-        <img height="50vh" src="{% static 'landa.jpg' %}"/>
-        <img height="50vh" src="{% static 'landb.jpg' %}"/>
-    </div>-->
 </div>
 
-<div style="background-color: rgb(224, 224, 37);">
-    <div style="width: 100%; border: 2px solid rgb(224, 224, 37);;">
+<div style="background-color: #900404; color:white;">
+    <div style="width: 100%; border: 2px solid transparent;">
         <div class="mission">
             <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Our Vision</h3>
             <h6 style="text-align: center;font-style: italic; font-size:20px;">What's Our goal</h6>
@@ -557,32 +703,99 @@
     </div>
 </div>
 
-<div class="tester">
-    <div style="width: 100%;">
-        <div class="testi">
-            <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Testimonials</h3>
-            <h6 style="text-align: center; font-style: italic;font-size:20px;">What people have to say about us</h6>
-            <div class="test">
-                <p>'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi rerum neque ea debitis perspiciatis ducimus blanditiis commodi harum quaerat maiores impedit alias, reprehenderit officiis deleniti, repellat molestias odio similique placeat'.
-                    </p>
-                    <p>-John Doe</p>
-            </div>
+
+
+<div>
+    <h3 style="text-align:center; margin-top: 20px;font-size:35px;">Resources</h3>
+    <h6 style="font-style: italic;font-size:20px; text-align:center; margin-bottom:30px;">Learning materials we use</h6>
+    <div class="gallery" style="margin-bottom:30px;">
+        <div class="gallHolder" style=" margin:auto;">
+            <img src="/static/landa.jpg">
+            <img src="/static/landb.jpg">
+            <img src="/static/landc.jpg">
+            <img src="/static/landd.jpg">
+            <img src="/static/lande.jpg">
+            <img src="/static/landf.jpg">
+            <img src="/static/landg.jpg">
+            <img src="/static/landh.jpg">
         </div>
     </div>
 </div>
 
-<div>
-    <h3 style="text-align:center;">Resources</h3>
+<div class="testi text-light" style="position:relative;background-color: #4cad89">
+    <h3 style="margin-top: 30px;text-align: center;font-size:35px; ">Testimonials</h3>
+    <h6 style="text-align: center;font-style: italic; font-size:20px;">What do people say about us</h6>
+    <div class="col-lg-12">
+        <div id="client-testimonial-carousel" class="carousel slide testSlide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum cum quo quos magnam maxime quasi reiciendis facilis architecto totam laudantium sed debitis quae, earum incidunt ut pariatur vitae aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quisquam. Amet recusandae dicta, adipisci ipsam itaque excepturi possimus ab voluptatum! Dolorum accusamus quis beatae atque omnis provident. Quo, rerum quisquam?
+                </p>
+                <footer class="blockquote-footer text-light">Jack Sparrow <cite title="Source Title">genius</cite></footer>
+                <!-- Client review stars -->
+                <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+                <p class="client-review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                </p>
+            </blockquote>
+            </div>
+            <div class="carousel-item text-center p-4">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid laborum, dolorum ipsam natus architecto, quas ducimus officia et recusandae autem nulla hic? Totam enim, cum nemo minus doloribus eligendi?
+                </p>
+                <footer class="blockquote-footer text-light">Albert Einstein <cite title="Source Title">genius</cite></footer>
+                <!-- Client review stars -->
+                <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+                <p class="client-review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </p>
+            </blockquote>
+            </div>
+            <div class="carousel-item text-center p-4">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laborum fuga nobis nulla velit quae earum quia tenetur, reiciendis deserunt veniam dolor suscipit aliquam qui ex magnam ducimus ea ipsam!
+                </p>
+                <footer class="blockquote-footer text-light">John Doe <cite title="Source Title">genius</cite></footer>
+                <!-- Client review stars -->
+                <!-- "fas fa-star" for a full star, "far fa-star" for an empty star, "far fa-star-half-alt" for a half star. -->
+                <p class="client-review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </p>
+            </blockquote>
+            </div>
+        </div><ol class="carousel-indicators pt-2 ">
+            <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+            <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        </div>
+    </div>   
+        
+   
 </div>
 
-<div style="background-color: rgb(127, 54, 54); padding:30px 0; color:white;">
+<div style=" padding:30px 0;">
     <div style="text-align: center;">
         <h4 style="font-size:35px;">Inquiries</h4>
         <h6 style="font-style: italic;font-size:15px;">For more information regarding our services</h6>
     </div>
-    <form action="" method="post" style="margin: 5vh auto; width:70vw;">
+    <form action="" method="post" style="margin: 5vh auto; width:70vw; ">
         <div class="contact" id='inlin'>
-            <div style="display:flex;margin-right: 100px;">{{form.name}}</div>
+            <div style="display:flex;margin-right: 60px;">{{form.name}}</div>
             <div style="display:flex;">{{form.email}}</div>
         </div>
 
@@ -591,6 +804,9 @@
             <div style="display:flex;">{{form.message}}</div>
         </div>
     </form>
-</div>        <footer style="color: #3eb489; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
+</div>
+
+        
+        <footer style="color: #3eb489; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
     </body>
 </html>
