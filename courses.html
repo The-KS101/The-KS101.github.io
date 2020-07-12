@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en", dir='ltr'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title></title>
+        <link rel="stylesheet" href='style.css' type='text/css'/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>    
+</head>
+    <body style="margin: 0;">
+        
+        {% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .nav {
+            font-size: 18px;
+        }
+
+    .land{
+        background: rgb(216,201,2);
+        background: -moz-linear-gradient(0deg, rgba(216,201,2,1) 0%, rgba(76,173,137,1) 52%);
+        background: -webkit-linear-gradient(0deg, rgba(216,201,2,1) 0%, rgba(76,173,137,1) 52%);
+        background: linear-gradient(0deg, rgba(216,201,2,1) 0%, rgba(76,173,137,1) 52%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d8c902",endColorstr="#4cad89",GradientType=1);
+        }
+    .basic{
+        width:  33.33333%;
+        text-align: center;
+        padding:20px 0;
+        color:white;
+    }
+
+    .biaHolder{
+        display: flex;
+        width: 100%;
+        margin:auto;
+        padding: 30px 0 0 0;
+    }
+    
+    #navList{
+        padding:2vh 2vw;
+        color:white;
+    }
+
+    #navList:hover{
+        background-color:#d8c90278;
+        color:white;
+        text-decoration: ;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+    .reg{
+        border: 2px solid black;
+        color:white; 
+        width:max-content; 
+        margin: auto; 
+        padding:15px;
+    }
+
+    .reg:hover{
+        background-color: #d8c902;
+    }
+
+    @media screen and (max-width: 760px) {
+        .nav {
+            font-size: 15px;
+        }
+
+        .biaHolder{
+            display:block;
+            margin:auto;
+            padding: 30px 0 0 0;
+        }
+        .basic{
+            width:  100%;
+            text-align: center;
+            padding:20px 0;
+            color:white;
+        }
+    }
+</style>
+
+<div class="land" style="position:relative;  color: white; background-size: 100% 100%; ">
+    <header  style=" display: flex; box-shadow: 0 6px 4px -4px black; ">
+        <div style=" width: 90vw;">
+            <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
+                <a href="/registration.html"><li id ="navList">Register</li><a></a>
+                <a href="/courses.html"><li id ="navList">Courses</li></a>
+                <a href="/#Contact"><li id ="navList">Contact</li>
+                <a href="/#about"><li id ="navList">About</li></a>
+            </ul>
+        </div>
+        
+    </header>
+
+    <div style="position:relative; top:0;left:0;width:100%;height:100%;"></div>
+
+    <div class='course' style="height:50vh; display: flex; justify-content: center;align-items: center;text-align: center;">
+        <div style="">
+            <h1 style="">Courses</h1>
+            <h4 style="font-style: italic;">Here's what we have to offer</h4>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div>
+        <div style="width: 90%; margin:30px auto;">
+            <h5 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum debitis similique accusamus! Eos, distinctio mollitia ut recusandae accusantium aspernatur! Maxime consequatur aperiam culpa pariatur? Soluta iure aspernatur dicta perspiciatis.</h5>
+            <h6 style="margin-top: 20px;">Course Duration:</h6>
+            <p>There are three reading levels in the Basic programme: the red, yellow and green learning levels.
+                Every level takes about three months to complete. The duration may vary depending on the pace of each student. There are 12 sessions in a month. A session lasts for 60-90 minutes. 
+                </p>
+            
+            <h6>Classes:</h6>
+                <p>Classes are structured to accommodate a minimum of 5 students to a maximum of 10 students. The course is designed to provide rotational check in sessions with each student. Currently classes are hosted virtually. 
+                Age: Students from four years and above. </p>
+            <h6> A placement assessment will be used to determine students learning level.</h6>
+            </div>
+        </div>
+    <div>
+    <div id="levels-info" class="biaHolder"> 
+        <div class='basic' style="background-color: #900404;">
+            <h3>Basic</h3>
+            <p  style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
+            <h6 style="margin: 15px 0;">Students will learn</h6>
+            <p style="width:80%; margin: auto; text-align: left">- Sounds <br>
+            - Blending <br>
+            - Reading <br>
+            - Writing <br>
+            - Spelling <br>
+            - Dictation <br>
+            - Tricky words <br>
+            - Comprehension </p>
+            <h6 style="margin-top: 20px;">Results</h6>
+            <p style="width:80%; margin: auto; text-align: left;">- By the end of the 4th session, students can read two and three-letter words.<br><br>
+               - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
+        </div>
+
+        <div class='basic' style="background-color: #d8c902;">
+            <h3>Intermediate</h3>
+            <p style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
+            <h6 style="margin: 15px 0;">Students will learn</h6>
+            <p style="width:80%; margin: auto; text-align: left">- Sounds <br>
+            - Blending <br>
+            - Reading <br>
+            - Writing <br>
+            - Spelling <br>
+            - Dictation <br>
+            - Tricky words <br>
+            - Comprehension </p>
+            <h6 style="margin-top: 20px;">Results</h6>
+            <p style="width:80%; margin: auto; text-align: left;">- By the end of the 4th session, students can read two and three-letter words.<br><br>
+               - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
+        </div>
+
+        <div class='basic' style="background-color: #4cad89;">
+            <h3>Advanced</h3>
+            <p style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
+            <h6 style="margin: 15px 0;">Students will learn</h6>
+            <p style="width:80%; margin: auto; text-align: left">- Sounds <br>
+            - Blending <br>
+            - Reading <br>
+            - Writing <br>
+            - Spelling <br>
+            - Dictation <br>
+            - Tricky words <br>
+            - Comprehension </p>
+            <h6 style="margin-top: 20px;">Results</h6>
+            <p style="width:80%; margin: auto; text-align: left;">- By the end of the 4th session, students can read two and three-letter words.<br><br>
+               - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
+        </div>
+    </div>
+    <div style="text-align: center; padding:10px 0; background-color:#4cad89; border-top: 2px solid black;">
+        <a href="/registration"><p class="reg">Register Now</p></a>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+        
+        <footer style="color: #d8c902; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
+    </body>
+</html>
