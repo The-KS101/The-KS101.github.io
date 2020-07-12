@@ -17,6 +17,10 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>    
 </head>
     <body style="margin: 0;">
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
 <style>
     .nav {
             font-size: 18px;
@@ -51,7 +55,6 @@
     #navList:hover{
         background-color:#d8c90278;
         color:white;
-        text-decoration: ;
     }
 
     a:hover{
@@ -63,6 +66,7 @@
         color:white; 
         width:max-content; 
         margin: auto; 
+        background-color:#4cad89;
         padding:15px;
     }
 
@@ -95,8 +99,8 @@
             <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
                 <a href="/registration.html"><li id ="navList">Register</li><a></a>
                 <a href="/courses.html"><li id ="navList">Courses</li></a>
-                <a href="/#Contact"><li id ="navList">Contact</li>
-                <a href="/#about"><li id ="navList">About</li></a>
+                <a href="/index.html#Contact"><li id ="navList">Contact</li>
+                <a href="/index.html#about"><li id ="navList">About</li></a>
             </ul>
         </div>
         
@@ -105,8 +109,8 @@
     <div style="position:relative; top:0;left:0;width:100%;height:100%;"></div>
 
     <div class='course' style="height:50vh; display: flex; justify-content: center;align-items: center;text-align: center;">
-        <div style="">
-            <h1 style="">Courses</h1>
+        <div>
+            <h1>Courses</h1>
             <h4 style="font-style: italic;">Here's what we have to offer</h4>
         </div>
     </div>
@@ -115,7 +119,9 @@
 <div>
     <div>
         <div style="width: 90%; margin:30px auto;">
-            <h5 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum debitis similique accusamus! Eos, distinctio mollitia ut recusandae accusantium aspernatur! Maxime consequatur aperiam culpa pariatur? Soluta iure aspernatur dicta perspiciatis.</h5>
+            <h5 style="text-align: left;"> J'elevates is a unique program that uses a systemic phonics approach to teach word-formation. Using the phonic system enables fluency in reading and writing. At J'elevates, we employ fun, multisensory teaching processes and age-appropriate materials for teaching reading and writing. 
+                Our learning program is designed to enhance reading, writing and comprehension for all ages.
+                </h5>
             <h6 style="margin-top: 20px;">Course Duration:</h6>
             <p>There are three reading levels in the Basic programme: the red, yellow and green learning levels.
                 Every level takes about three months to complete. The duration may vary depending on the pace of each student. There are 12 sessions in a month. A session lasts for 60-90 minutes. 
@@ -129,7 +135,7 @@
         </div>
     <div>
     <div id="levels-info" class="biaHolder"> 
-        <div class='basic' style="background-color: #900404;">
+        <div class='basic' id="basic" style="background-color: #900404;">
             <h3>Basic</h3>
             <p  style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
             <h6 style="margin: 15px 0;">Students will learn</h6>
@@ -146,7 +152,7 @@
                - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
         </div>
 
-        <div class='basic' style="background-color: #d8c902;">
+        <div class='basic' id="intermediate" style="background-color: #d8c902;">
             <h3>Intermediate</h3>
             <p style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
             <h6 style="margin: 15px 0;">Students will learn</h6>
@@ -163,7 +169,7 @@
                - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
         </div>
 
-        <div class='basic' style="background-color: #4cad89;">
+        <div class='basic' id="advanced" style="background-color: #4cad89;">
             <h3>Advanced</h3>
             <p style="margin: 0 10px;">At the basic level Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi soluta voluptates cupiditate, impedit a, amet id illum dolores odit facere unde adipisci sed velit quasi porro error aliquam. Cupiditate, odit?</p>
             <h6 style="margin: 15px 0;">Students will learn</h6>
@@ -180,11 +186,28 @@
                - By the end of the 12th session (a month), students can read 350 three-sounds words, 4, 230 four-words and 21,650 five-sound words</p>
         </div>
     </div>
-    <div style="text-align: center; padding:10px 0; background-color:#4cad89; border-top: 2px solid black;">
-        <a href="/registration"><p class="reg">Register Now</p></a>
+
+<div style="text-align: center; width:100%">
+    <div style=" width: 33.33%; margin: auto;padding: 30px;">
+        <h5 style="margin: 10px 0 15px 0;">Fee:</h5>
+        <h6 style="font-style: italic;">Price for all Levels is:</h6>
+        <h2 style="margin: 30px 0;">$375</h2>
+        <div style="margin:auto; text-align:left; width:40%;">
+            <p>Registration <b style="float:right;">$25</b></p>
+            <p>Materials <b style="float:right;">$50</b></p>
+            <p>Tuition <b style="float:right;">$300</b></p>
+        </div>
+        
+    </div>
+</div>
+
+    <div style="text-align: center; padding-bottom: 30px;">
+        <a href="/registration.html"><p class="reg" >Register Now</p></a>
     </div>
 </div>
 </div>
+
+
         
         <footer style="color: #d8c902; background-color:black; font-family:'Courier New', Courier, monospace; text-align:center; padding:4vh; font-size: 2vh;">&copy;2020 jelevate llc</footer>
     </body>
