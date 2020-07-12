@@ -72,18 +72,10 @@
     </head>
 
     <body style="margin: 0;">
-        <!--<header style="background-color: #3eb489; display: flex; clear: both; padding: 5px;">
-            <div style=" width: 90vw;">
-                <ul style="float: right; display: flex; list-style: none; font-family: Calibri; font-size: 15px;">
-                    <li style="color: white; margin-right: 30px;" >Register</li>
-                    <li style="margin-right: 30px;">Courses</li>
-                    <li style="color: white; margin-right: 30px;">Contact</li>
-                    <li style="margin-right: 30px;">About</li>
-                </ul>
-            </div>
-        </header>-->
-       
-        <script>
+        {% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<script>
     var bgImageArray = [ "landp.jpg", "lando.jpg", "landl.jpg", 'landm.jpg'],
     base = "/static/",
     secs = 7;
@@ -163,7 +155,6 @@ backgroundSequence();
     #navList:hover{
         background-color:#d8c90278;
         color:white;
-        text-decoration: ;
     }
 
     a:hover{
@@ -634,9 +625,9 @@ backgroundSequence();
 
     <div class='subSect'>
         <div  class="subDiv hide" id="subDivbasic" style=" position:relative; ">
-            <a href="/courses.html#levels-info">
+            <a href="/courses.html#basic">
                 <div class="imgLevel" style="background-color: #4cad89;">
-                    <img src="/static/alt.png" />
+                    <img  src="{% static 'alt.png' %}" />
                 </div>
                 <div class="levels" id="basic">
                     <h4 class="hide">Basic</h4>
@@ -648,9 +639,9 @@ backgroundSequence();
             
         </div>
         <div  class="subDiv hide" id="subDivmid" style=" position:relative;">
-            <a href="/courses.html#levels-info">
+            <a href="/courses.html#intermediate">
                 <div class="imgLevel" style="background-color:#900404; ">
-                    <img src="/static/alta.png"/>
+                    <img  src="{% static 'alta.png' %}" />
                 </div>
                 <div class="levels" id=mid > 
                     <h4 class="hide">Interemediate</h4>
@@ -659,9 +650,9 @@ backgroundSequence();
             </a>
         </div>
         <div  class="subDiv hide"id="subDivadvanced" style=" position:relative;">
-            <a href="/courses.html#levels-info">
+            <a href="/courses.html#advanced">
             <div class="imgLevel" style="background-color:#d8c902;">
-                <img src="/static/altb.png" />
+                <img  src="{% static 'altb.png' %}" />
             </div>
             <div class="levels" id="advanced">
                 <h4 class="hide">Advanced</h4>
@@ -678,11 +669,8 @@ backgroundSequence();
     <div style="width: 100%;">
         <div class="abt">
             <h3 style="font-size: 35px;">Our Mission</h3>
-            <h4 style="font-style: italic; font-size: 20px;">What we aim to achieve</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quis quia? Magnam, provident eligendi. In vel tenetur atque culpa voluptatibus possimus perferendis odit ab modi quis, magnam, harum expedita reprehenderit?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente et autem odio vitae consequatur nisi. Cupiditate nesciunt esse, eligendi maxime nam quibusdam aliquid quisquam ex. Ratione quos reprehenderit tempore est!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique laudantium distinctio explicabo unde? Illo dolorum, provident placeat, dolore adipisci illum voluptates enim commodi, vel voluptatem aperiam officia necessitatibus blanditiis expedita.
-            </p>
+            <h4 style="font-style: italic; font-size: 20px;">teaching children to read properly.</h4>
+            <p> The mission of the Viking Child Care Center is to provide safe, affordable, high quality child care for the students of Hudson Valley Community College and the community. IN doing so, we support families in their efforts to reach their goals. The Viking child Care Center provides a cognitively based program for children ages six weeks to five years. We provide a home like environment where children are encouraged to develop at their own pace. The Viking staff is committed to the families we serve, providing support and encouragement.</p>
         </div>
     </div>
 </div>
@@ -690,15 +678,15 @@ backgroundSequence();
 <div style="background-color: #d8c902; color:white;">
     <div style="width: 100%; border: 2px solid transparent;">
         <div class="mission">
-            <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Our Vision</h3>
-            <h6 style="text-align: center;font-style: italic; font-size:20px;">What's Our goal</h6>
+            <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Our vision </h3>
+            <h6 style="text-align: center;font-style: italic; font-size:20px;">to provide children the ability to properly pronounce</h6>
             <div class="miss">
                 <p class="missp">We believe just like Dr. Martin Kozloff rightly said, If a child memorizes ten words, the child can read ten words but if a child learns ten letter sounds, they are able to read:
-                350 three-sound words, 4320 four-sound words, 21,650 five-sound words. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi rerum neque ea debitis perspiciatis ducimus blanditiis commodi harum quaerat maiores impedit alias, reprehenderit officiis deleniti, repellat molestias odio similique placeat.
+                350 three-sound words, 4320 four-sound words, 21,650 five-sound words.
                     </p>
 
-                <p class="missp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod ab sequi, illum beatae ea asperiores voluptate enim excepturi atque cupiditate eos necessitatibus adipisci ipsa rem quaerat ad numquam cum. Quasi?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam excepturi voluptatum alias reiciendis optio, molestiae molestias at dignissimos tempore, esse sequi odit modi fugit minima est deserunt, sit dicta id.
+                <p class="missp">The ultimate vision we have for our facility is twofold, and rooted in both the present and the future.
+                    For the present, our goal is for parents to feel good about their childcare choice, and that the children are safe, engaged, educated, and smiling. And for the future, we want these children to warmly look back at their experience with us, and see it as a cherished part of their childhood.
                 </p>
             </div>
         </div>
@@ -710,11 +698,16 @@ backgroundSequence();
         <div class="abt">
             <h3 style="font-size:35px;">About Me</h3>
             <h6 style="font-style: italic;font-size:20px;">I'm here to help you</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi recusandae similique natus assumenda dicta itaque ipsa, accusantium sed repellat voluptatibus ut hic molestias nisi? Sed totam nam distinctio quis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum placeat perspiciatis consequatur. Voluptate atque sit dolorum culpa vero expedita beatae repudiandae tenetur veritatis! Ab voluptatibus excepturi modi odio numquam?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam! Dignissimos repellendus doloribus at quaerat sed a, in molestiae totam, recusandae cumque voluptatum blanditiis eaque molestias doloremque ea. Similique, perferendis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis fuga praesentium ratione dicta, aperiam voluptatibus non ullam consectetur iure omnis doloremque voluptates placeat eligendi alias temporibus et vitae deleniti!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, autem delectus totam consectetur maiores fuga neque itaque atque, nisi in fugit ipsum iste molestiae nihil expedita obcaecati quo iure odit?
+            <p>Hey, I’m Lindsay, a freelance writer in New York. And I’m totally obsessed with true crime podcasts.
+                I’ve been a full-time freelancer for 10 years, and I’ve talked to a lot of marketing agencies during that time. I know how tough it can be to hire freelancers – they don’t know what you want and you don’t know what they need.
+                I act as the middleman between agencies and writers so that you can both get what you need without any delays, surprises or unexpected expenses.
+                J'elevates is a unique program that uses a systemic phonics approach to teach word-formation. Using the phonic system enables fluency in reading and writing. At J'elevates, we employ fun, multisensory teaching processes and age-appropriate materials for teaching reading and writing. 
+                Our learning program is designed to enhance reading, writing and comprehension for all ages.                
+                Degree/ Certification <br>
+                Show off skills/ Show of confidence <br>
+                Founding year <br>
+                Location <br>
+                Most impressive achievement(s) <br>
             </p>
         </div>
     </div>
@@ -819,6 +812,9 @@ backgroundSequence();
         <div class="contact">
             <div style="display:flex; margin:30px 0;">{{form.subject}}</div>
             <div style="display:flex;">{{form.message}}</div>
+        </div>
+        <div style="width:100%;text-align:center;">
+            <input type="submit" value="Submit" style="text-align:center; border:2px solid black; width:max-content; padding:10px;">
         </div>
     </form>
 </div>
