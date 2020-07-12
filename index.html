@@ -84,7 +84,7 @@
         </header>-->
        
         <script>
-    var bgImageArray = ["landj.jpg",  "landm.jpg", "lando.jpg", "landl.jpg"],
+    var bgImageArray = [ "landp.jpg", "lando.jpg", "landl.jpg", 'landm.jpg'],
     base = "/static/",
     secs = 7;
     bgImageArray.forEach(function(img){
@@ -144,11 +144,30 @@ backgroundSequence();
 </script>
 
 <style>
+    .subDiv a{
+        color: white;
+    }
+
     .hide{
         opacity: 0;
     }
     .hideR{
         opacity: 0;
+    }
+
+    #navList{
+        padding:2vh 2vw;
+        color:white;
+    }
+
+    #navList:hover{
+        background-color:#d8c90278;
+        color:white;
+        text-decoration: ;
+    }
+
+    a:hover{
+        text-decoration: none;
     }
 
     @media screen and (max-width: 760px) {
@@ -180,7 +199,6 @@ backgroundSequence();
             font-size: 20px;
         }
 
-
         .subSect {
             font-size: 2vh;
             margin-top: 0px;
@@ -195,6 +213,8 @@ backgroundSequence();
             margin: 0;
             border:1px solid transparent;        
         }
+
+
 
 
         #subDivbasic{
@@ -546,30 +566,6 @@ backgroundSequence();
 
     }
 
-	
-
-    @keyframes backGFadeInOut {
-        0% {
-        opacity:1;
-        }
-        45% {
-        opacity:1;
-        }
-        55% {
-        opacity:0;
-        }
-        100% {
-        opacity:0;
-        }
-        }
-
-        #cf3 img.top {
-        animation-name: backGimg;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 10s;
-        animation-direction: alternate;
-        }
 
     @-webkit-keyframes slideIn {
             0%{
@@ -617,13 +613,13 @@ backgroundSequence();
 </style>
 
 <div class="land" style="position:relative;  color: white; background-size: 100% 100%; ">
-    <header  style=" display: flex; padding:2vh;">
+    <header  style=" display: flex;">
         <div style=" width: 90vw;">
             <ul class="nav" style="float: right; display: flex; list-style: none; font-family: Calibri; ">
-                <li style="color: white; margin-right: 3vw;" >Register</li>
-                <li style="margin-right: 3vw;">Courses</li>
-                <li style="color: white; margin-right: 3vw;">Contact</li>
-                <li style="margin-right: 3vw;">About</li>
+                <a href="/registration.html"><li id ="navList">Register</li></a>
+                <a href="/courses.html"><li id ="navList">Courses</li></a>
+                <a href="/#Contact"><li id ="navList">Contact</li></a>
+                <a href="/#about"><li id ="navList">About</li></a>
             </ul>
         </div>
         
@@ -638,55 +634,60 @@ backgroundSequence();
 
     <div class='subSect'>
         <div  class="subDiv hide" id="subDivbasic" style=" position:relative; ">
-            <div class="imgLevel" style="background-color: #4cad89;">
-                <img  src="/static/alt.png" />
-            </div>
-            <div class="levels" id="basic">
-                <h4 class="hide">Basic</h4>
-                <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
-                Using the phonic system enables fluency in reading and writing.</p>
-            </div>
+            <a href="/courses.html#levels-info">
+                <div class="imgLevel" style="background-color: #4cad89;">
+                    <img src="/static/alt.png" />
+                </div>
+                <div class="levels" id="basic">
+                    <h4 class="hide">Basic</h4>
+                    <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
+                    Using the phonic system enables fluency in reading and writing.</p>
+                </div>
+            </a>
+            
             
         </div>
         <div  class="subDiv hide" id="subDivmid" style=" position:relative;">
-            <div class="imgLevel" style="background-color:#900404; ">
-                <img  src="/static/alta.png" />
-            </div>
-            <div class="levels" id=mid > 
-                <h4 class="hide">Interemediate</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi perferendis ipsum eum impedit officia cum tenetur. Facilis iste adipisci quisquam sint saepe vel maiores neque eos possimus? Possimus, fuga?</p>
-            </div>
-        
+            <a href="/courses.html#levels-info">
+                <div class="imgLevel" style="background-color:#900404; ">
+                    <img src="/static/alta.png"/>
+                </div>
+                <div class="levels" id=mid > 
+                    <h4 class="hide">Interemediate</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi perferendis ipsum eum impedit officia cum tenetur. Facilis iste adipisci quisquam sint saepe vel maiores neque eos possimus? Possimus, fuga?</p>
+                </div>
+            </a>
         </div>
         <div  class="subDiv hide"id="subDivadvanced" style=" position:relative;">
+            <a href="/courses.html#levels-info">
             <div class="imgLevel" style="background-color:#d8c902;">
-                <img  src="/static/altb.png" />
+                <img src="/static/altb.png" />
             </div>
             <div class="levels" id="advanced">
                 <h4 class="hide">Advanced</h4>
                 <p>J'Elevates is a unique program that uses a systemic phonic approach to teach word formation.
                     Using the phonic system enables fluency in reading and writing.</p>
+                </a>
         </div>
     
     </div>
     </div>
 
-<div style="">
+
+<div style="border:2px solid transparent; ">
     <div style="width: 100%;">
         <div class="abt">
-            <h3 style="font-size:35px;">About Me</h3>
-            <h6 style="font-style: italic;font-size:20px;">I'm here to help you</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi recusandae similique natus assumenda dicta itaque ipsa, accusantium sed repellat voluptatibus ut hic molestias nisi? Sed totam nam distinctio quis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum placeat perspiciatis consequatur. Voluptate atque sit dolorum culpa vero expedita beatae repudiandae tenetur veritatis! Ab voluptatibus excepturi modi odio numquam?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam! Dignissimos repellendus doloribus at quaerat sed a, in molestiae totam, recusandae cumque voluptatum blanditiis eaque molestias doloremque ea. Similique, perferendis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis fuga praesentium ratione dicta, aperiam voluptatibus non ullam consectetur iure omnis doloremque voluptates placeat eligendi alias temporibus et vitae deleniti!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, autem delectus totam consectetur maiores fuga neque itaque atque, nisi in fugit ipsum iste molestiae nihil expedita obcaecati quo iure odit?
+            <h3 style="font-size: 35px;">Our Mission</h3>
+            <h4 style="font-style: italic; font-size: 20px;">What we aim to achieve</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quis quia? Magnam, provident eligendi. In vel tenetur atque culpa voluptatibus possimus perferendis odit ab modi quis, magnam, harum expedita reprehenderit?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente et autem odio vitae consequatur nisi. Cupiditate nesciunt esse, eligendi maxime nam quibusdam aliquid quisquam ex. Ratione quos reprehenderit tempore est!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique laudantium distinctio explicabo unde? Illo dolorum, provident placeat, dolore adipisci illum voluptates enim commodi, vel voluptatem aperiam officia necessitatibus blanditiis expedita.
             </p>
         </div>
     </div>
 </div>
 
-<div style="background-color: #900404; color:white;">
+<div style="background-color: #d8c902; color:white;">
     <div style="width: 100%; border: 2px solid transparent;">
         <div class="mission">
             <h3 style="margin-top: 20px;text-align: center;font-size:35px;">Our Vision</h3>
@@ -704,24 +705,21 @@ backgroundSequence();
     </div>
 </div>
 
-
-
-<div>
-    <h3 style="text-align:center; margin-top: 20px;font-size:35px;">Resources</h3>
-    <h6 style="font-style: italic;font-size:20px; text-align:center; margin-bottom:30px;">Learning materials we use</h6>
-    <div class="gallery" style="margin-bottom:30px;">
-        <div class="gallHolder" style=" margin:auto;">
-            <img src="/static/landa.jpg">
-            <img src="/static/landb.jpg">
-            <img src="/static/landc.jpg">
-            <img src="/static/landd.jpg">
-            <img src="/static/lande.jpg">
-            <img src="/static/landf.jpg">
-            <img src="/static/landg.jpg">
-            <img src="/static/landh.jpg">
+<div id="about">
+    <div style="width: 100%;">
+        <div class="abt">
+            <h3 style="font-size:35px;">About Me</h3>
+            <h6 style="font-style: italic;font-size:20px;">I'm here to help you</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi recusandae similique natus assumenda dicta itaque ipsa, accusantium sed repellat voluptatibus ut hic molestias nisi? Sed totam nam distinctio quis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum placeat perspiciatis consequatur. Voluptate atque sit dolorum culpa vero expedita beatae repudiandae tenetur veritatis! Ab voluptatibus excepturi modi odio numquam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam! Dignissimos repellendus doloribus at quaerat sed a, in molestiae totam, recusandae cumque voluptatum blanditiis eaque molestias doloremque ea. Similique, perferendis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis fuga praesentium ratione dicta, aperiam voluptatibus non ullam consectetur iure omnis doloremque voluptates placeat eligendi alias temporibus et vitae deleniti!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, autem delectus totam consectetur maiores fuga neque itaque atque, nisi in fugit ipsum iste molestiae nihil expedita obcaecati quo iure odit?
+            </p>
         </div>
     </div>
 </div>
+
 
 <div class="testi text-light" style="position:relative;background-color: #4cad89">
     <h3 style="margin-top: 30px;text-align: center;font-size:35px; ">Testimonials</h3>
@@ -789,7 +787,25 @@ backgroundSequence();
    
 </div>
 
-<div style=" padding:30px 0;">
+
+<div>
+    <h3 style="text-align:center; margin-top: 20px;font-size:35px;">Resources</h3>
+    <h6 style="font-style: italic;font-size:20px; text-align:center; margin-bottom:30px;">Learning materials we use</h6>
+    <div class="gallery" style="margin-bottom:30px;">
+        <div class="gallHolder" style=" margin:auto;">
+            <img src="/static/landa.jpg">
+            <img src="/static/landb.jpg">
+            <img src="/static/landc.jpg">
+            <img src="/static/landd.jpg">
+            <img src="/static/lande.jpg">
+            <img src="/static/landf.jpg">
+            <img src="/static/landg.jpg">
+            <img src="/static/landh.jpg">
+        </div>
+    </div>
+</div>
+
+<div id="Contact" style=" padding:30px 0; background-color: #d8c902; color:white;">
     <div style="text-align: center;">
         <h4 style="font-size:35px;">Inquiries</h4>
         <h6 style="font-style: italic;font-size:15px;">For more information regarding our services</h6>
